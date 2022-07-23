@@ -19,6 +19,7 @@ h1 {
     font-style: normal;
     font-weight: 500;
     margin-bottom: 0.2rem; 
+    margin-left: 3.5rem;
 }
 
 p {
@@ -27,26 +28,33 @@ p {
     margin-bottom: 0.8rem;
     font-style: normal;
     color: #6B7280;
+    margin-left: 3.5rem;
 }
 
-#wrapper {
+main {
     margin: 2rem auto;
     width: 36rem;
-    height: 26rem;
+    height: 28rem;
     text-align: left;
     background-color: #FFF;
     color:  #273549;
     transition: background 0.2s ease-in-out;
 }
 
-#header-wrapper {
-    margin-left: 3.5rem;
-    padding-top: 1rem
-}
-
 span.color {
     color: #4ADF86;
     display: block;
+}
+
+.controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.controls {
+    margin-right: 3.5rem;
+    visibility: hidden;
 }
 
 button {
@@ -57,6 +65,10 @@ button {
     border-radius:  0.25rem;
 }
 
+#generate-el{
+    margin: auto 0 0 3.5rem;
+    height: 2rem;
+}
 
 #passlength {
     -moz-appearance: textfield;
@@ -66,7 +78,6 @@ button {
     border: 1px solid #4ADF86;
     border-radius: 0.25rem;
 }
-
 
 hr {
     border: 1px solid #D5D4D8;
@@ -136,7 +147,7 @@ hr {
     transform: translate(24px);
 }
 
-body.dark #wrapper {
+body.dark main {
     background-color: #1F2937;
 }
 
@@ -151,5 +162,4 @@ body.dark p {
 body.dark hr {
     border: 1px solid #2F3E53;
 }
-
 
