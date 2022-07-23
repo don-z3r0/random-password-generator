@@ -23,8 +23,28 @@
             <!-- Header -->
             <h1 id="heading-el">Generate a <span class="color">random password</span></h1>
             <p id="paragraph-el">Never use an insecure password again</p>
+
+            <!-- Password Controls -->
+            <div class="controls-wrapper">
+                <button id="generate-el" onclick="generatePass()">Generate Passwords</button>
+                <div class="controls">
+                    <label for="passlength">Length: (8-20)</label>
+                    <div id="length-controls">
+                        <button id="decrement" onclick="decrement()">-</button>
+                        <input id="passlength" type="number" min="8" max="20" inputmode="numeric" />
+                        <button id="increment" onclick="increment()">+</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Password Display -->
+            <div id="pass-wrapper">
+                <div id="passone-el" class="pass"></div>
+                <div id="passtwo-el" class="pass"></div>
+            </div>
         </main>        
         
-        <script src="scricpts/index.js"></script>
+        <script src="scripts/index.js"></script>
     </body>
 </html>
