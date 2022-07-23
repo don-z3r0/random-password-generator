@@ -19,6 +19,18 @@ function generatePass() {
     passEl2.textContent = getPass()
 }
 
+function copyPassOne() {
+    let valueOne = document.getElementById("passone-el").textContent
+    navigator.clipboard.writeText(valueOne);
+    alert( valueOne + ` copied to clipboard`);
+}
+
+function copyPassTwo() {
+    let valueTwo = document.getElementById("passtwo-el").textContent
+    navigator.clipboard.writeText(valueTwo);
+    alert( valueTwo + ` copied to clipboard`);
+}
+
 const checkbox = document.getElementById("checkbox")
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark")
