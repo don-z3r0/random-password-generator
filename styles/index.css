@@ -162,3 +162,12 @@ body.dark hr {
     border: 1px solid #2F3E53;
 }
 
+@media only screen and (max-width: 812px) {
+    main {
+        transform: scale(0.7)
+    }
+    
+    .pass {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
