@@ -174,10 +174,20 @@ body.dark hr {
         margin: auto;
         position: absolute;
         top: 0;
-        left: -4rem
+        width: 28rem;
+        height: 33rem;
     }
     
     .pass {
         font-family: Arial, Helvetica, sans-serif;
+        margin-top: 0.8rem;
+    }
+    
+    #pass-wrapper {
+        display: block;
+    }
+    
+    #generate-el {
+        height: 3rem;
     }
 }
