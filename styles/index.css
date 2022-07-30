@@ -173,8 +173,9 @@ body.dark hr {
         margin: auto;
         position: absolute;
         top: 0;
-        width: 24rem;
-        height: 33rem;
+        width: 26rem;
+        height: 36rem;
+        text-align: center;
     }
     
     .pass {
