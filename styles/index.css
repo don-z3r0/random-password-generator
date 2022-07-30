@@ -170,7 +170,6 @@ body.dark hr {
     }
     
     main {
-        transform: scale(0.7);
         margin: auto;
         position: absolute;
         top: 0;
