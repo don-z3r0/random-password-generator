@@ -164,7 +164,7 @@ body.dark hr {
     border: 1px solid #2F3E53;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 415px) {
     body {
         line-height: 1;
     }
