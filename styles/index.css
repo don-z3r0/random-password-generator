@@ -31,7 +31,7 @@ p {
 
 main {
     width: 36rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     text-align: left;
     background-color: #FFF;
     color:  #273549;
