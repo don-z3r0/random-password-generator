@@ -6,13 +6,9 @@
     box-sizing: border-box;
 }
 
-
 body {
-    margin: 0;
     line-height: 1.5;
     background-color: #000;
-    height: 100vh;
-    width: 100vw;
 }
 
 h1 {
@@ -20,32 +16,36 @@ h1 {
     font-size: 2.5em;
     font-style: normal;
     font-weight: 500;
-    margin-left: 3.5rem;
     margin-bottom: 0.2rem; 
+    margin-left: 3.5rem;
 }
 
 p {
     font-family: 'Edu TAS Beginner', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    margin-left: 3.5rem;
     margin-bottom: 0.8rem;
     font-style: normal;
     color: #6B7280;
+    margin-left: 3.5rem;
 }
 
 main {
-    margin: 2rem auto;
     width: 36rem;
-    height: 24rem;
+    padding-bottom: 1rem;
     text-align: left;
     background-color: #FFF;
     color:  #273549;
     transition: background 0.2s ease-in-out;
+    margin: auto;
 }
 
 span.color {
     color: #4ADF86;
     display: block;
+}
+
+.controls-wrapper {
+    margin-left: 3.5rem;
 }
 
 button {
@@ -56,28 +56,9 @@ button {
     border-radius:  0.25rem;
 }
 
-.controls-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.controls {
-    margin-right: 3.5rem;
-    visibility: hidden;
-}
-
-#generate-el {
-    margin: auto 0 0 3.5rem;
+#generate-el{
+    margin: auto auto 0;
     height: 2rem;
-}
-
-
-#passlength {
-    -moz-appearance: textfield;
-    width: 3.6rem;
-    text-align: center;
-    border: 1px solid #4ADF86;
-    border-radius: 0.25rem;
 }
 
 hr {
@@ -85,22 +66,24 @@ hr {
     margin: 0.8rem 3.5rem;
 }
 
+
+
 #pass-wrapper {
+    margin: 0 3.5rem;
     display: flex;
-    justify-content: space-between;
-    margin: 0.8rem 3.5rem;
+    flex-direction: column;
 }
 
 .pass {
-    width: 12rem;
-    height: 2rem;
+    height: 2.5rem;
     background-color: #273549;
     border-radius:  0.25rem;
     color: #4ADF86;
     text-align: center;
-    padding: 0.2rem 1.2rem;
-    font-family: 'Edu TAS Beginner', Arial, Helvetica, sans-serif;
-    cursor: default;
+    padding: 0.2rem 1rem;
+    font-family: serif, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
 }
 
 .togglemode {
@@ -163,6 +146,7 @@ body.dark p {
 body.dark hr {
     border: 1px solid #2F3E53;
 }
+
 
 @media only screen and (max-width: 415px) {
     body {
