@@ -35,11 +35,3 @@ const checkbox = document.getElementById("checkbox")
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark")
 })
-
-// function decrement() {
-//     console.log("minus")
-// }
-
-// function increment() {
-//     console.log("plus")
-// }
