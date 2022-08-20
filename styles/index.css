@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Passion+One&display=swap');
-
 
 * {
     box-sizing: border-box;
@@ -154,11 +152,9 @@ body.dark hr {
     }
     
     main {
-        margin: auto;
-        position: absolute;
-        top: 0;
-        width: 26rem;
-        height: 36rem;
+        margin: 0 auto;
+        width: 24rem;
+        height: 85vh;
         text-align: center;
     }
     
