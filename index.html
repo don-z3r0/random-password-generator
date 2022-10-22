@@ -1,78 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Juma Harun">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Random Password Generator</title>
-        <link rel="stylesheet" href="styles/index.css">
-        <script src="https://kit.fontawesome.com/7c1118da26.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Merriweather&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <main>
-            <section id="togglemode" class="togglemode">
-                <input type="checkbox" class="checkbox" id="checkbox">
-                <label for="checkbox" class="checkbox-label">
-                    <i class="fa-solid fa-moon"></i>
-                    <i class="fa-solid fa-sun"></i>
-                    <span class="ball"></span>
-                </label> 
-            </section>
-            
-            <header>
-                <h1 id="heading-el">Generate <span>random passwords</span></h1>
-                <p>Never use an insecure password again</p>
-            </header>
-            
-            <section id="control-container" class="controls">
-                <div id="slider-header" class="slider-header">
-                    <p>Length:</p>
-                    <input id="range" type="range" value="8" min="8" max="12" oninput="rangevalue.value=value"/>
-                  <output id="rangevalue"></output>
-                </div>
-            </section>
-            
-            <section id="generate-container" class="generate">
-                <button class="generate-btn" id="gen-btn"><i class="fa-solid fa-bolt"></i>Generate passwords</button>
-                <div class="options">
-                    <input type="checkbox" id="numbers-chars" name="checkbox">
-                    <label for="numbers-char" class="options-label" id="numbers-label">Numbers</label>
-    
-                    <input type="checkbox" id="special-chars" name="checkbox">
-                    <label for="special-char" class="options-label" id="special-label">Special characters</label>
-                </div>
-            </section>
-            
-            <hr>
-            
-            <section id="password-container" class="passwords">
-                <div class="pass-wrapper">
-                    <p id="pass1" class="password"><i class="fa-solid fa-ellipsis"></i></p>
-                    <button id="copy1" class="copy"><i class="fa-solid fa-copy"></i></button>
-                </div>
-                
-                <div class="pass-wrapper">
-                    <p id="pass2" class="password"><i class="fa-solid fa-ellipsis"></i></p>
-                    <button id="copy2" class="copy"><i class="fa-solid fa-copy"></i></button>
-                </div>
-                
-                <div class="pass-wrapper">
-                    <p id="pass3" class="password"><i class="fa-solid fa-ellipsis"></i></p>
-                    <button id="copy3" class="copy"><i class="fa-solid fa-copy"></i></button>
-                </div>
-                
-                <div class="pass-wrapper">
-                    <p id="pass4" class="password"><i class="fa-solid fa-ellipsis"></i></p>
-                    <button id="copy4" class="copy"><i class="fa-solid fa-copy"></i></button>
-                </div>
-                
-            </section>
-            
-        </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Juma Harun" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <script
+      src="https://kit.fontawesome.com/7c1118da26.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-        <script src="scripts/index.js"></script>
-    </body>
+  <body>
+    <main>
+      <section id="togglemode" class="togglemode">
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="checkbox-label">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+          <span class="ball"></span>
+        </label>
+      </section>
+
+      <header>
+        <h1 id="heading-el">Generate <span>random passwords</span></h1>
+        <p>Never use an insecure password again</p>
+      </header>
+
+      <section id="control-container" class="controls">
+        <div id="slider-header" class="slider-header">
+          <p>Length:</p>
+          <input
+            id="range"
+            type="range"
+            value="8"
+            min="8"
+            max="15"
+            oninput="rangevalue.value=value"
+          />
+          <output id="rangevalue" class="range-value"></output>
+        </div>
+      </section>
+
+      <section id="generate-container" class="generate">
+        <button class="generate-btn" id="gen-btn">
+          <i class="fa-solid fa-bolt"></i>Generate passwords
+        </button>
+        <div class="options">
+          <input type="checkbox" id="numbers-chars" name="checkbox" />
+          <label for="numbers-char" class="options-label" id="numbers-label"
+            >Numbers</label
+          >
+
+          <input type="checkbox" id="special-chars" name="checkbox" />
+          <label for="special-char" class="options-label" id="special-label"
+            >Special characters</label
+          >
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="password-container" class="passwords">
+        <div class="pass-wrapper">
+          <p class="password" id="pass-1"><i class="fa-solid fa-ellipsis"></i></p>
+          <button class="copy-btn" data-copy="pass-1"><i class="fa-solid fa-copy"></i></button>
+        </div>
+        <div class="pass-wrapper">
+          <p class="password" id="pass-2"><i class="fa-solid fa-ellipsis"></i></p>
+          <button class="copy-btn" data-copy="pass-2"><i class="fa-solid fa-copy"></i></button>
+        </div>
+        <div class="pass-wrapper">
+          <p class="password" id="pass-3"><i class="fa-solid fa-ellipsis"></i></p>
+          <button class="copy-btn" data-copy="pass-3"><i class="fa-solid fa-copy"></i></button>
+        </div>
+        <div class="pass-wrapper">
+          <p class="password" id="pass-4"><i class="fa-solid fa-ellipsis"></i></p>
+          <button class="copy-btn" data-copy="pass-4"><i class="fa-solid fa-copy"></i></button>
+        </div>
+        
+        <div class="prompt" id="prompt"></div>
+      </section>
+    </main>
+
+    <script src="scripts/index.js"></script>
+  </body>
 </html>
