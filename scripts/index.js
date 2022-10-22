@@ -66,50 +66,44 @@ function generatePasswords() {
     }
     
     for (let i = 0; i < passwords.length; i++) {
-        passEls[i].textContent = passwords[i]
+        passEls[i].innerText = passwords[i]
     }
 }
 
 genBtn.addEventListener('click', generatePasswords)
 
 const checkbox = document.getElementById("checkbox")
+
+checkbox.checked = false
+
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("dark")
 })
 
-let copyBtn1 = document.getElementById('copy1')
-let copyBtn2 = document.getElementById('copy2')
-let copyBtn3 = document.getElementById('copy3')
-let copyBtn4 = document.getElementById('copy4')
 
-copyBtn1.addEventListener('click', function() {
-	let copyText = document.getElementById('pass1').textContent
-    
-	navigator.clipboard.writeText(copyText)
 
-	alert('Copied the password: ' + copyText)
-})
+function sendPrompt(msg) {
+  const prompt = document.createElement('p')
+  prompt.classList.add('notification')
+  prompt.innerText = msg
+  document.getElementById('prompt').appendChild(prompt)
+  
+  setTimeout(() => {
+    prompt.remove()
+  }, 1500)
+}
 
-copyBtn2.addEventListener('click', function() {
-	let copyText = document.getElementById('pass2').textContent
-    
-	navigator.clipboard.writeText(copyText)
+const copyBtns = document.querySelectorAll('.copy-btn')
 
-	alert('Copied the password: ' + copyText)
-})
 
-copyBtn3.addEventListener('click', function() {
-	let copyText = document.getElementById('pass3').textContent
-    
-	navigator.clipboard.writeText(copyText)
+copyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const passEl = document.getElementById(`${btn.dataset.copy}`)
+        if(passEl.textContent !== '') {
+            let textToCopy = passEl.textContent
 
-	alert('Copied the password: ' + copyText)
-})
-
-copyBtn4.addEventListener('click', function() {
-	let copyText = document.getElementById('pass4').textContent
-    
-	navigator.clipboard.writeText(copyText)
-
-	alert('Copied the password: ' + copyText)
+            navigator.clipboard.writeText(textToCopy)
+            sendPrompt(`${textToCopy} copied ✔️`)
+        }
+    })
 })
